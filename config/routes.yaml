@@ -1,3 +1,16 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+hello:
+    path: /hello/{prenom}
+    controller: App\Controller\HelloWorldController::hello
+    requirements:
+        prenom: "[a-zA-Z]+"
+helloliste:
+    path: /helloliste
+    controller: App\Controller\HelloWorldController::helloListe
+form:
+    path: /form
+    controller: App\Controller\HelloWorldController::form
+    methods: GET
+formReceive:
+    path: /form/receive
+    controller: App\Controller\HelloWorldController::formReceive
+    methods: POST
