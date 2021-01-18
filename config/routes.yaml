@@ -27,3 +27,15 @@ userForm:
     path: /user/create
     controller: App\Controller\Forms\UserController::create
     methods: GET|POST
+
+createRecord:
+    path: /record/create
+    controller: App\Controller\RecordController::createRecord
+    methods: GET
+
+getRecordById:
+    path: /record/{id}
+    controller: App\Controller\RecordController::getById
+    methods: GET
+    requirements:
+        id: "\\d+"
